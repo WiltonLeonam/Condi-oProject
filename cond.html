@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Aula de Condições</h1>
+   Qual o seu nome ? <input type="text" name="pais" id="vel">
+   <p>Qual estado vc mora:
+    <select id="selector">
+      <option value="SP">SP</option>
+      <option value="RJ">RJ</option>
+      <option value="MG">MG</option>
+      <option value="ES">ES</option>
+      
+    </select>
+  </p>
+   <input type="button" value="Enviar" onclick="identidade()">
+   <div id="res">Resultado</div>
+
+  <script>
+     function identidade(){
+        var p1 = String(window.document.getElementById('vel').value)
+        var res = window.document.getElementById('res')
+        var selector = window.document.getElementById('selector').value
+
+        switch(selector){
+          case 'SP' :
+            res.innerHTML = "O seu nome é "+ p1 + " e você é Paulista !"
+            break
+          case 'RJ' :
+            res.innerHTML = "O seu nome é "+ p1 + " e você é Carioca !"
+            break
+          case 'MG' :
+            res.innerHTML = "O seu nome é "+ p1 + " e você é Mineiro !"
+            break
+          case 'ES' :
+            res.innerHTML = "O seu nome é "+ p1 + " e você é Capixaba !"
+            break
+        }
+      }        
+                  
+  </script>
+</body>
+</html>
